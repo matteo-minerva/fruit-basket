@@ -1,13 +1,17 @@
 import "regenerator-runtime/runtime";
-import { allFruitEndpoint, baseURL, unknownValue } from "./constants";
+import {
+  ACTIVE_CARD_CLASS,
+  CARD_ELEMENT,
+  FRUITS_SECTION_ELEMENT,
+} from "./constants/DOM";
+import { ALL_FRUIT_ENDPOINT, BASE_URL, UNKNOWN_VALUE } from "./constants/api";
 import { get, pick } from "lodash";
-
 import $ from "jquery";
 import { fruitCard } from "./fruitCard";
 import { http } from "./http";
 
 $(document).ready(async () => {
-  const endpoint = baseURL + allFruitEndpoint;
+  const endpoint = BASE_URL + ALL_FRUIT_ENDPOINT;
   const rowData = await http(endpoint);
   const data = remap(rowData, ["name", "family", "nutritions"]);
   appendToDOM(data);
@@ -15,23 +19,23 @@ $(document).ready(async () => {
 });
 
 const remap = (data, elementsToKeep) => {
-  return data.map((fruit) => {
-    return pick(fruit, elementsToKeep);
+  return data.map((pieceOfData) => {
+    return pick(pieceOfData, elementsToKeep);
   });
 };
 
 const appendToDOM = (data) => {
   data.map((fruit) => {
-    const name = get(fruit, "name", unknownValue);
-    const family = get(fruit, "family", unknownValue);
-    const nutritions = get(fruit, "nutritions", unknownValue);
+    const name = get(fruit, "name", UNKNOWN_VALUE);
+    const family = get(fruit, "family", UNKNOWN_VALUE);
+    const nutritions = get(fruit, "nutritions", UNKNOWN_VALUE);
     const fruitCardElement = fruitCard(name, family, nutritions);
-    return $(".fruits").append(fruitCardElement);
+    return FRUITS_SECTION_ELEMENT.append(fruitCardElement);
   });
 };
 
 const addCardClickListener = () => {
-  return $(".card").click(function () {
-    $(this).toggleClass("card--active");
+  return CARD_ELEMENT.click(function () {
+    $(this).toggleClass(ACTIVE_CARD_CLASS);
   });
 };

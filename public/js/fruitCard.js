@@ -1,12 +1,12 @@
+import { UNKNOWN_VALUE } from "./constants/api";
 import { get } from "lodash";
-import { unknownValue } from "./constants";
 
 export const fruitCard = (name, family, nutritions) => {
-  const carbohydrates = get(nutritions, "carbohydrates", unknownValue);
-  const protein = get(nutritions, "protein", unknownValue);
-  const fat = get(nutritions, "fat", unknownValue);
-  const calories = get(nutritions, "calories", unknownValue);
-  const sugar = get(nutritions, "sugar", unknownValue);
+  const carbohydrates = get(nutritions, "carbohydrates", UNKNOWN_VALUE);
+  const protein = get(nutritions, "protein", UNKNOWN_VALUE);
+  const fat = get(nutritions, "fat", UNKNOWN_VALUE);
+  const calories = get(nutritions, "calories", UNKNOWN_VALUE);
+  const sugar = get(nutritions, "sugar", UNKNOWN_VALUE);
 
   return `<div class="card">
     <div class="card__inner">
