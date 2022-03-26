@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-export const $FRUITS_SECTION_ELEMENT = $(".fruits");
+export const $BODY_ELEMENT = $("body");
 export const $CARD_ELEMENT = $(".card");
 export const $ERROR_TITLE_ELEMENT = $(".error__title");
 export const $ERROR_MESSAGE_ELEMENT = $(".error__message");
