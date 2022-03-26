@@ -1,8 +1,8 @@
 import {
-  CLOSE_MODAL_ELEMENT,
-  ERROR_MESSAGE_ELEMENT,
-  ERROR_TITLE_ELEMENT,
-  MODAL_ELEMENT,
+  $CLOSE_MODAL_ELEMENT,
+  $ERROR_MESSAGE_ELEMENT,
+  $ERROR_TITLE_ELEMENT,
+  $MODAL_ELEMENT,
 } from "./constants/DOM";
 import { RESPONSE_OK } from "./constants/api";
 import axios from "axios";
@@ -24,10 +24,10 @@ export const http = async (endpoint) => {
 };
 
 const handleError = (name, message) => {
-  ERROR_TITLE_ELEMENT.text(name);
-  ERROR_MESSAGE_ELEMENT.text(message);
-  MODAL_ELEMENT.toggle();
-  CLOSE_MODAL_ELEMENT.click(() => {
-    MODAL_ELEMENT.toggle();
+  $ERROR_TITLE_ELEMENT.text(name);
+  $ERROR_MESSAGE_ELEMENT.text(message);
+  $MODAL_ELEMENT.toggle();
+  $CLOSE_MODAL_ELEMENT.click(() => {
+    $MODAL_ELEMENT.toggle();
   });
 };

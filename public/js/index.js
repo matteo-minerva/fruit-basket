@@ -1,9 +1,6 @@
 import "regenerator-runtime/runtime";
-import {
-  ACTIVE_CARD_CLASS,
-  CARD_ELEMENT,
-  FRUITS_SECTION_ELEMENT,
-} from "./constants/DOM";
+import "./constants/DOM";
+import { $FRUITS_SECTION_ELEMENT, ACTIVE_CARD_CLASS } from "./constants/DOM";
 import { ALL_FRUIT_ENDPOINT, BASE_URL, UNKNOWN_VALUE } from "./constants/api";
 import { get, pick } from "lodash";
 import $ from "jquery";
@@ -30,12 +27,12 @@ const appendToDOM = (data) => {
     const family = get(fruit, "family", UNKNOWN_VALUE);
     const nutritions = get(fruit, "nutritions", UNKNOWN_VALUE);
     const fruitCardElement = fruitCard(name, family, nutritions);
-    return FRUITS_SECTION_ELEMENT.append(fruitCardElement);
+    return $FRUITS_SECTION_ELEMENT.append(fruitCardElement);
   });
 };
 
 const addCardClickListener = () => {
-  return CARD_ELEMENT.click(function () {
+  return $(".card").click(function () {
     $(this).toggleClass(ACTIVE_CARD_CLASS);
   });
 };
