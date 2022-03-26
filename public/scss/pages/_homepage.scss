@@ -1,0 +1,62 @@
+.homepage {
+  & .about {
+    min-height: 100vh;
+
+    @include media(desktop) {
+      @include flex-container();
+    }
+
+    & .image {
+      @include flex-container($align: center, $justify: center);
+      min-height: 50vh;
+      background-color: rgba(7, 117, 215, 0.86);
+
+      @include media(desktop) {
+        max-width: unset;
+        width: 50vw;
+      }
+
+      & img {
+        max-width: 100%;
+      }
+    }
+
+    & .text {
+      @include flex-container(
+        $direction: column,
+        $align: center,
+        $justify: center
+      );
+      padding: 0 2rem;
+      min-height: 50vh;
+      text-align: center;
+      line-height: 2;
+
+      @include media(tablet) {
+        padding: 0 5rem;
+      }
+
+      @include media(desktop) {
+        max-width: unset;
+        width: 50vw;
+      }
+
+      & span {
+        font-size: 20px;
+        @include media(tablet) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  & .fruits {
+    @include flex-container($wrap: wrap, $justify: space-between);
+    margin-bottom: 7rem;
+
+    @include media(desktop) {
+      max-width: 1200px;
+      margin: 10rem auto;
+    }
+  }
+}

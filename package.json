@@ -1,0 +1,27 @@
+{
+  "name": "parce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-html-partials": "^0.0.6",
+    "prettier": "^2.6.1",
+    "sass": "^1.49.9"
+  }
+}
