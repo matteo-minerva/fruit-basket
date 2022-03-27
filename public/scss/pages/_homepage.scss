@@ -9,7 +9,7 @@
     & .image {
       @include flex-container($align: center, $justify: center);
       min-height: 50vh;
-      background-color: rgba(7, 117, 215, 0.86);
+      background-color: $c-blue;
 
       @include media(desktop) {
         max-width: unset;
