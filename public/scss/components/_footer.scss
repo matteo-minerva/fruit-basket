@@ -1,0 +1,22 @@
+footer {
+  @include flex-container($justify: center, $align: center);
+  height: 4.375rem;
+  background-color: lightcyan;
+
+  @include media(tablet) {
+    height: 5rem;
+  }
+
+  & .hearth {
+    color: red;
+    margin: 0 0.2rem;
+  }
+
+  & .author {
+    display: inline-block;
+    margin-left: 0.2rem;
+    text-decoration: none;
+    color: cornflowerblue;
+    cursor: pointer;
+  }
+}

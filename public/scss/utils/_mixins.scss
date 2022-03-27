@@ -1,10 +1,10 @@
 @mixin media($device) {
   @if $device == tablet {
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
       @content;
     }
   } @else if $device == desktop {
-    @media (min-width: 1200px) {
+    @media (min-width: 75rem) {
       @content;
     }
   }

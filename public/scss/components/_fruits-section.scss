@@ -1,0 +1,9 @@
+.fruits {
+  @include flex-container($wrap: wrap, $justify: space-between);
+  margin-bottom: 7rem;
+
+  @include media(desktop) {
+    max-width: 75rem;
+    margin: 10rem auto;
+  }
+}
