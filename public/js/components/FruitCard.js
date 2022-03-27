@@ -1,4 +1,4 @@
-import { UNKNOWN_VALUE } from "./constants/api";
+import { UNKNOWN_VALUE } from "../constants/api";
 import { get } from "lodash";
 
 export const fruitCard = (name, family, nutritions) => {

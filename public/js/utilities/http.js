@@ -3,8 +3,8 @@ import {
   $ERROR_MESSAGE_ELEMENT,
   $ERROR_TITLE_ELEMENT,
   $MODAL_ELEMENT,
-} from "./constants/DOM";
-import { RESPONSE_OK } from "./constants/api";
+} from "../constants/DOM";
+import { RESPONSE_OK } from "../constants/api";
 import axios from "axios";
 
 export const http = async (endpoint) => {

@@ -4,9 +4,9 @@ import { $BODY_ELEMENT, ACTIVE_CARD_CLASS } from "./constants/DOM";
 import { ALL_FRUIT_ENDPOINT, BASE_URL, UNKNOWN_VALUE } from "./constants/api";
 import { get, isEmpty, pick } from "lodash";
 import $ from "jquery";
-import { fruitCard } from "./fruitCard";
-import { fruitsSection } from "./fruits-section";
-import { http } from "./http";
+import { fruitCard } from "./components/FruitCard";
+import { fruitsSection } from "./components/FruitsSection";
+import { http } from "./utilities/http";
 
 $(document).ready(async () => {
   const endpoint = BASE_URL + ALL_FRUIT_ENDPOINT;
