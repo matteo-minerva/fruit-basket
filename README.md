@@ -3,15 +3,12 @@
 <!-- PROJECT SHIELDS -->
 
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="./public/images/favicon.ico" alt="Logo" width="80" height="80">
-  </a>
+<img src="./public/images/favicon.ico" alt="Logo" width="80" height="80">
 
 <h3 align="center">Fruit Basket</h3>
 
@@ -67,10 +64,6 @@ The application must allow the user to search for a specific fruit. This must al
 
 - [Parcel](https://parceljs.org/)
 - [jQuery](https://jquery.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Axios](https://axios-http.com/)
-- [lodash](https://lodash.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -126,9 +119,8 @@ Project Link: [https://github.com/matteo-minerva/fruit-basket](https://github.co
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/matteo-minerva/fruit-basket.svg?style=for-the-badge
 [issues-url]: https://github.com/matteo-minerva/fruit-basket/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/m-minerva/
